@@ -13,12 +13,8 @@ if PARENT_DIR not in sys.path:
 from rag.vectorstore import get_vectorstore
 
 
-KNOWLEDGE_BASE_DIR = os.path.join(
-    "Backend",
-    "math-mentor",
-    "rag",
-    "knowledge_base",
-)
+# Use the CURRENT_DIR we already defined to create an absolute path
+KNOWLEDGE_BASE_DIR = os.path.join(CURRENT_DIR, "knowledge_base")
 
 
 def ingest_docs() -> None:
